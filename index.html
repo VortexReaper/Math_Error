@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Math Error</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a0033, #000000);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(26, 0, 51, 0.9);
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        header img {
+            width: 240px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #61dafb;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #21a1f1;
+        }
+
+        main {
+            padding: 120px 20px 20px 20px;
+            text-align: center;
+        }
+
+        section {
+            margin-top: 50px
+            margin-bottom: 40px;
+            animation: fadeIn 1s ease;
+            padding-top: 80px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1, h2 {
+            padding-top: 20px;
+            text-shadow: 0 0 8px #61dafb, 0 0 15px #21a1f1;
+        }
+
+        .btn {
+            background-color: #61dafb;
+            color: #282c34;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #21a1f1;
+            transform: scale(1.1);
+        }
+
+        footer {
+            background: rgba(26, 0, 51, 0.9);
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        footer ul li a {
+            color: #61dafb;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        footer ul li a:hover {
+            color: #21a1f1;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Transparent background MATH ERROR.png" alt="Team Math Error Logo">
+        <nav>
+            <ul>
+                <li><a href="javascript:void(0)" onclick="showSection('home')">Home</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('about')">About</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('videos')">Videos</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('announcements')">Announcements</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" style="display:none;">
+            <h1>Welcome to Team Math Error</h1>
+            <p>bla bla bla bla</p>
+        </section>
+
+        <section id="about" style="display:none;">
+            <h2>About Us</h2>
+            <p>bla bla bla bla bla</p>
+        </section>
+
+        <section id="videos" style="display:none;">
+            <h2>Our Videos</h2>
+        </section>
+
+        <section id="announcements" style="display:none;">
+            <h2>Announcements</h2>
+        </section>
+    </main>
+
+    <footer>
+        <p>Follow us on:</p>
+        <ul>
+            <li><a href="https://www.facebook.com/share/18nNcay5Uw/" target = "_blank">Facebook</a></li>
+            <li><a href="https://tiktok.com/@math.error.team" target = "_blank">TikTok</a></li>
+            <li><a href="https://www.instagram.com/math_error79?igsh=MTdscWFoNW1vc2VleQ==" target = "_blank">Instagram</a></li>
+            <li><a href="https://www.youtube.com/@MathError-f5b" target = "_blank">YouTube</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('main section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+            var sectionToShow = document.getElementById(sectionId);
+            if (sectionToShow) {
+                sectionToShow.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
